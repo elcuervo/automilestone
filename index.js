@@ -15,7 +15,7 @@ module.exports = app => {
     milestones.then(result => {
       const milestoneId = result.data.map(milestone => milestone.number)[0];
       const pr = context.issue({
-        pr_number: payload.pull_request.number,
+        issue_number: payload.pull_request.number,
         milestone: milestoneId
       });
 
